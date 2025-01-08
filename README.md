@@ -1,16 +1,21 @@
 # patrol_test_project
 
-A new Flutter project.
+Run with :
+`patrol test -t integration_test/example_test.dart --dart-define=TEST=Testowanie --verbose`
 
-## Getting Started
+`Received 12 --dart-define(s) (1 custom, 11 internal)
+Received custom --dart-define: TEST
+Received internal --dart-define: PATROL_WAIT=0
+Received internal --dart-define: PATROL_APP_PACKAGE_NAME=com.example.patrol_test_project
+Received internal --dart-define: PATROL_APP_BUNDLE_ID=com.example.MyApp
+Received internal --dart-define: PATROL_MACOS_APP_BUNDLE_ID=com.example.macos.MyApp
+Received internal --dart-define: PATROL_ANDROID_APP_NAME=My App
+Received internal --dart-define: PATROL_IOS_APP_NAME=My App
+Received internal --dart-define: INTEGRATION_TEST_SHOULD_REPORT_RESULTS_TO_NATIVE=false
+Received internal --dart-define: PATROL_TEST_LABEL_ENABLED=true
+Received internal --dart-define: PATROL_TEST_SERVER_PORT=8081
+Received internal --dart-define: PATROL_APP_SERVER_PORT=8082
+Received internal --dart-define: COVERAGE_ENABLED=false`
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Test fails because custom dart-define isn't set.
